@@ -46,7 +46,8 @@ namespace UserRegistration
             string passwardpattern = "^[A-Za-z0-9]{8,20}$";
             string passwardpattern1 = "^(?=.*[A-Z])(?=.*[a-z]{8,}).*$";
             string passwardpattern2 = "^(?=.*[A-Z])(?=.*[0-9]).{8,}$";
-            if (Regex.IsMatch(Passward, passwardpattern))
+            string passwardpattern3 = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[&%$#@^*!~]).{8,}$";
+            if (Regex.IsMatch(Passward, passwardpattern)) 
                 Console.WriteLine("Passward is valid");
             else
                 Console.WriteLine("Invalid passward!!");
