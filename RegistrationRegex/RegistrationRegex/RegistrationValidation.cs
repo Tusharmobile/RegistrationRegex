@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-using System.Text.RegularExpressions;
-
 namespace UserRegistration
 {
     internal class RegistrationValidation
@@ -42,6 +40,15 @@ namespace UserRegistration
                 Console.WriteLine("Mobile number is valid");
             else
                 Console.WriteLine("Invalid mobile number!!");
+        }
+        public void Checkpassward(string Passward)
+        {
+            string passwardpattern = "^[A-Za-z0-9]{8,20}$";
+            string passwardpattern1 = "^(?=.*[A-Z])(?=.*[a-z]{8,}).*$";
+            if (Regex.IsMatch(Passward, passwardpattern))
+                Console.WriteLine("Passward is valid");
+            else
+                Console.WriteLine("Invalid passward!!");
         }
 
     }
