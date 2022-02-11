@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+using System.Text.RegularExpressions;
+
 namespace UserRegistration
 {
     internal class RegistrationValidation
@@ -32,6 +34,14 @@ namespace UserRegistration
                 Console.WriteLine("Email id is valid");
             else
                 Console.WriteLine("Invalid name!!");
+        }
+        public void Checkmobilenum(string Mobilenum)
+        {
+            string mobilenumpattern = "^[1,9]{2}-[6-9]{1}[0-9]{9}";
+            if (Regex.IsMatch(Mobilenum, mobilenumpattern))
+                Console.WriteLine("Mobile number is valid");
+            else
+                Console.WriteLine("Invalid mobile number!!");
         }
 
     }
