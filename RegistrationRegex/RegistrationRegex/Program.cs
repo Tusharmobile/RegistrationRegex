@@ -53,7 +53,7 @@ namespace UserRegistration
                         RegistrationValidation passwardruleone = new RegistrationValidation();
                         passwardruleone.Checkpassward(passward);
                         break;
-                        break;
+
                     case 6:
                         flag = false;
                         break;
